@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Toko Susilo v2</title>
+    <script defer src="./tugasDay11.js"></script>
+    <style>
+        tr, td, table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Filter</legend>
+            <p>Nama: <input type="text" id="namaFilter" oninput="filterNama()"></p>
+            <p>Harga: <input type="number" id="hargaLowest" onkeyup="filterHarga()"> - <input type="number" id="hargaHighest" onkeyup="filterHarga()"></p>
+            <p>Kategori: <select name="kategori2" id="categoryFilter" onchange="filterKategori()">
+            
+            </select>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Input Data</legend>
+            <table>
+                <td>
+                    <input type="text" id="nama" placeholder="Nama">
+                </td>
+                <td>
+                    <input type="number" id="harga" placeholder="Harga">
+                </td>
+                <td>
+                    <select name="kategori" id="categoryInput">
+                        
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="stock" placeholder="Stock">
+                </td>
+                
+            </table>
+            <input type="button" value="Add Data" onclick="addData()">
+        </fieldset>
+        <fieldset>
+            <legend>Tabel Data</legend>
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Kategori</th>
+                    <th>Harga(Rp)</th>
+                    <th>Stock</th>
+                    <th>Beli</th>
+                    <th colspan="2">
+                        Action
+                    </th>
+                </thead>
+                <tbody id="output">
+
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Keranjang</legend>
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Kategori</th>
+                    <th>Harga</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id="cart">
+
+                </tbody>
+            </table>
+            <br>
+            <input type="submit" value="Payment">
+        </fieldset>
+    </form>
+</body>
+</html>
