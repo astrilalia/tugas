@@ -13,6 +13,7 @@ function angka(num){
 // console.log(angka([1,4,-2,-9,5,-21]))
 
 
+// Belum selesai kak//
 /* substring yang paling panjang
 function dua parameter str
 parameter pertama: 'treysut'
